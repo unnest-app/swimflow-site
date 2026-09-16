@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwimFlow — 지난 수영이 다음 수영을 만듭니다</title>
+  <meta name="description" content="Apple Watch 수영 데이터를 분석해 다음 세션을 자동으로 설계하는 앱. 서버 없이 모든 데이터는 기기에 저장됩니다." />
+  <!--
+    배포용 마케팅 랜딩 (Support URL + Marketing URL 겸용).
+    호스팅: swimflow.unnest.app 루트(/)에 게시.
+    ※ 개인정보처리방침은 별도 페이지 — docs/legal/privacy-policy.html 을 /privacy 경로에 게시.
+       App Store Connect 개인정보처리방침 URL + 인앱 링크(AppLinks.swift) = https://swimflow.unnest.app/privacy
+    ※ 출시 후: 아래 "APP_STORE_URL" 자리에 App Store 링크 삽입 + class="cta disabled"에서 disabled 제거.
+  -->
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --surface: #f5f7fa;
+      --text: #10151c;
+      --text-dim: #566072;
+      --border: #e4e8ee;
+      --accent: #0A84FF;
+      --accent-2: #32D4DE;
+      --navy-1: #060B11;
+      --navy-2: #0D1826;
+      --code-bg: #eef1f5;
+      --on-navy: #eaf2ff;
+      --on-navy-dim: #9db2cc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #060B11;
+        --surface: #0D1520;
+        --text: #eef2f7;
+        --text-dim: #9aa7b8;
+        --border: #1e2a38;
+        --code-bg: #142031;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(120% 140% at 15% 0%, rgba(10,132,255,0.28), transparent 60%),
+        radial-gradient(120% 140% at 100% 20%, rgba(50,212,222,0.22), transparent 55%),
+        linear-gradient(160deg, var(--navy-1), var(--navy-2));
+      color: var(--on-navy);
+      padding: 88px 0 72px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 6vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0 0 18px;
+    }
+    .hero .sub {
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      font-weight: 500;
+      color: var(--on-navy);
+      opacity: 0.92;
+      margin: 0 0 22px;
+    }
+    .hero .body {
+      font-size: 1.02rem;
+      color: var(--on-navy-dim);
+      max-width: 620px;
+      margin: 0 0 34px;
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #04121f;
+      font-weight: 700;
+      font-size: 1.02rem;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+    }
+    .cta.disabled { opacity: 0.55; pointer-events: none; }
+    .cta-note { display: block; margin-top: 12px; font-size: 0.88rem; color: var(--on-navy-dim); }
+
+    /* Sections */
+    section { padding: 56px 0; border-top: 1px solid var(--border); }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 18px;
+    }
+    h3 { font-size: 1.08rem; font-weight: 600; margin: 26px 0 8px; }
+    p { margin: 12px 0; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+    .faq h3 { margin-top: 20px; }
+    .faq h3:first-child { margin-top: 0; }
+    footer { padding: 40px 0 64px; color: var(--text-dim); font-size: 0.92rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--text-dim); }
+    footer .muted { opacity: 0.8; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- ① 히어로 -->
+  <header class="hero" id="home">
+    <div class="wrap">
+      <h1>지난 수영이 다음 수영을 만듭니다</h1>
+      <p class="sub">Apple Watch 수영 데이터를 분석해, 다음 세션을 자동으로 설계하는 앱</p>
+      <p class="body">
+        SwimFlow는 Apple Watch로 기록한 수영 데이터를 분석해 거리·페이스·SWOLF·심박수 기반으로
+        다음 수영 세션을 자동 설계합니다. 세션 분석 리포트, 4주 성장 추세, 영법별 효율, HR 존 분포까지
+        한 앱에서 확인하세요. 서버 없이 모든 데이터는 기기에 저장되며, HealthKit은 읽기 전용으로만 사용합니다.
+      </p>
+      <!-- 출시 후 href를 App Store 주소로 교체하고 class="cta disabled"에서 disabled 제거 -->
+      <a class="cta disabled" href="#" data-appstore="APP_STORE_URL">App Store에서 다운로드 →</a>
+      <span class="cta-note">출시 준비 중입니다.</span>
+    </div>
+  </header>
+
+  <!-- ② 문의 및 지원 -->
+  <section id="support">
+    <div class="wrap">
+      <h2>문의 및 지원</h2>
+      <p>SwimFlow 사용 중 궁금한 점이나 문제가 있으시면 이메일로 연락 주세요. 확인하는 대로 답변드리겠습니다.</p>
+      <div class="card">이메일: <a href="mailto:unnest.ai@gmail.com">unnest.ai@gmail.com</a></div>
+
+      <div class="faq">
+        <h3>Q. 수영 기록이 보이지 않아요.</h3>
+        <p>SwimFlow는 Apple Watch로 측정한 수영 워크아웃을 Apple 건강 앱에서 읽어옵니다.
+          ① Apple Watch로 수영을 기록했는지, ② 앱 첫 실행 시 건강 데이터 읽기 권한을 허용했는지 확인해 주세요.
+          권한은 iPhone [설정] → [건강] → [데이터 접근 및 기기] → SwimFlow에서 변경할 수 있습니다.</p>
+
+        <h3>Q. 데이터가 외부로 전송되나요?</h3>
+        <p>아니요. SwimFlow는 서버가 없으며, 수영·세션 데이터는 기기에 저장됩니다(iCloud를 사용하시면
+          본인 Apple 계정으로 백업될 수 있습니다). 익명 사용 통계(개인 식별 불가)만 제품 개선을 위해 수집합니다.
+          자세한 내용은 <a href="/privacy">개인정보처리방침</a>을 참고해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="/privacy">개인정보처리방침</a> · <a href="mailto:unnest.ai@gmail.com">문의</a></p>
+      <p class="muted">© 2026 unnest · SwimFlow</p>
+    </div>
+  </footer>
+
+</body>
+</html>
