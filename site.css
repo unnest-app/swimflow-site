@@ -8,6 +8,18 @@
   --line:#253441;
   --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",sans-serif;
 }
+.watch-section { background:#0a131d; border-top:1px solid var(--line); }
+.watch-features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px; margin-top:56px; }
+.watch-features article { min-width:0; }
+.watch-feature-screen { width:min(100%,232px); padding:8px; margin:0 auto 38px; border:2px solid #354856; border-radius:48px; background:#15222e; box-shadow:0 20px 40px #0004; }
+.watch-feature-screen img { width:100%; border-radius:36px; }
+.watch-features .eyebrow { margin-bottom:12px; font-size:.75rem; }
+.watch-features h3 { font-size:1.4rem; margin-bottom:18px; }
+.watch-features article>p:last-child { color:var(--muted); font-size:.9375rem; }
+@media(max-width:700px) {
+  .watch-features { grid-template-columns:minmax(0,1fr); gap:54px; }
+  .watch-feature-screen { width:220px; margin-bottom:28px; }
+}
 * {
   box-sizing:border-box;
 }
