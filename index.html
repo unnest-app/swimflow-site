@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#060B11" />
-  <title>SwimFlow — 지난 수영이 다음 수영을 만듭니다</title>
+  <title>SwimFlow · 지난 수영이 다음 수영을 만듭니다</title>
   <meta name="description" content="오늘의 수영을 준비하고, 손목에서 계획대로 이어가세요. 쌓인 기록은 다음 수영의 바탕이 됩니다." />
-  <meta property="og:title" content="SwimFlow — 지난 수영이 다음 수영을 만듭니다" />
+  <meta property="og:title" content="SwimFlow · 지난 수영이 다음 수영을 만듭니다" />
   <meta property="og:description" content="오늘의 수영을 준비하고, 손목에서 계획대로 이어가세요. 쌓인 기록은 다음 수영의 바탕이 됩니다." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://swimflow.unnest.app/" />
@@ -17,9 +17,9 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="SwimFlow — 지난 수영이 다음 수영을 만듭니다. 세션 준비부터 Watch 수영, 기록 분석까지." />
+  <meta property="og:image:alt" content="SwimFlow · 지난 수영이 다음 수영을 만듭니다. 세션 준비부터 Watch 수영, 기록 분석까지." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SwimFlow — 지난 수영이 다음 수영을 만듭니다" />
+  <meta name="twitter:title" content="SwimFlow · 지난 수영이 다음 수영을 만듭니다" />
   <meta name="twitter:description" content="오늘의 수영을 준비하고, 손목에서 계획대로 이어가세요. 쌓인 기록은 다음 수영의 바탕이 됩니다." />
   <meta name="twitter:image" content="https://swimflow.unnest.app/assets/swimflow-share-release-1.png" />
   <link rel="icon" type="image/png" href="assets/app-icon.png" />
@@ -65,81 +65,65 @@
       <div class="section-heading">
         <h2 id="journey-title">한 번으로 끝나지 않는 흐름.</h2>
       </div>
-      <div class="journey-layout">
-        <div class="flywheel">
-          <svg class="wheel-path" viewBox="0 0 360 360" aria-hidden="true">
-            <defs><marker id="loop-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.5" /></marker></defs>
-            <circle cx="180" cy="180" r="120" fill="none" stroke="currentColor" opacity=".15" />
-            <g fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#loop-arrow)">
-              <path d="M235 74 A120 120 0 0 1 297 206" />
-              <path d="M207 297 A120 120 0 0 1 163 299" />
-              <path d="M64 211 A120 120 0 0 1 96 94" />
-            </g>
-          </svg>
-          <svg class="compact-wheel-path" viewBox="0 0 360 280" aria-hidden="true">
-            <defs><marker id="compact-loop-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M1 1 L7 4.5 L1 8" fill="none" stroke="currentColor" stroke-width="1.8" /></marker></defs>
-            <g fill="none" stroke="currentColor" stroke-width="2.5" marker-end="url(#compact-loop-arrow)">
-              <path d="M245 44 C301 62 322 102 309 154" />
-              <path d="M237 221 C203 251 157 251 123 221" />
-              <path d="M51 154 C38 102 59 62 115 44" />
-            </g>
-          </svg>
-          <p class="wheel-center" aria-hidden="true">기록이 쌓일수록<br /><strong>나에게 맞게</strong></p>
-          <div class="loop-tabs" data-tabs aria-label="준비, 집중, 변화, 다시 준비로 이어지는 수영 단계">
-            <a id="tab-plan" class="loop-node node-plan" href="#panel-plan" data-tab aria-controls="panel-plan" aria-label="01 다음 수영을 준비하고"><span class="step" aria-hidden="true">01</span><strong><span class="loop-label-full">다음 수영을<br />준비하고</span><span class="loop-label-short" aria-hidden="true">준비</span></strong></a>
-            <a id="tab-swim" class="loop-node node-swim" href="#panel-swim" data-tab aria-controls="panel-swim" aria-label="02 나의 수영에 집중하고"><span class="step" aria-hidden="true">02</span><strong><span class="loop-label-full">나의 수영에<br />집중하고</span><span class="loop-label-short" aria-hidden="true">수영</span></strong></a>
-            <a id="tab-review" class="loop-node node-review" href="#panel-review" data-tab aria-controls="panel-review" aria-label="03 쌓여가는 변화를 보고"><span class="step" aria-hidden="true">03</span><strong><span class="loop-label-full">쌓여가는<br />변화를 보고</span><span class="loop-label-short" aria-hidden="true">변화</span></strong></a>
+      <div class="journey-content">
+        <section class="journey-panel" id="panel-plan" aria-labelledby="plan-title">
+          <div class="panel-copy">
+            <p class="eyebrow">01 · 수영을 준비하고</p>
+            <h3 id="plan-title">오늘 할 수영,<br />고민은 짧게.</h3>
+            <p>나에게 맞는 수영을 추천받고,<br />오늘의 컨디션에 맞게 다듬으세요.</p>
           </div>
-          <p class="loop-caption">이번 기록으로, 다음 수영을 준비합니다 <span aria-hidden="true">↻</span></p>
-        </div>
-        <div class="journey-content">
-          <section class="journey-panel" id="panel-plan" aria-labelledby="plan-title" tabindex="0">
-            <div class="panel-copy">
-              <p class="eyebrow">iPhone · 수영 전</p>
-              <h3 id="plan-title">오늘 할 수영,<br />고민은 짧게.</h3>
-              <p>나에게 맞는 수영을 추천받고,<br />오늘의 컨디션에 맞게 다듬으세요.</p>
-            </div>
-            <figure class="panel-visual">
-              <div class="phone"><img src="assets/app-home-release.png" width="1320" height="2868" alt="첫 출시 홈 화면. 다음 세션의 추천 구성과 편집, 재설계 기능" loading="lazy" /></div>
-              <figcaption class="screen-note">iPhone · 다음 세션</figcaption>
-            </figure>
-          </section>
-          <section class="journey-panel swim-panel" id="panel-swim" aria-labelledby="swim-title" tabindex="0">
-            <div class="panel-copy" id="watch">
-              <p class="eyebrow">Apple Watch · 수영 중</p>
-              <h3 id="swim-title">계획한 수영을,<br />손목에서 이어가세요.</h3>
-            </div>
-            <div class="watch-demo">
-              <div class="state-tabs" data-tabs aria-label="Watch 화면 살펴보기">
-                <a id="tab-active" href="#watch-active" data-tab aria-controls="watch-active">수영 중</a>
-                <a id="tab-rest" href="#watch-rest" data-tab aria-controls="watch-rest">휴식</a>
-                <a id="tab-lane" href="#watch-lane" data-tab aria-controls="watch-lane">시작 전</a>
+          <figure class="panel-visual">
+            <div class="phone"><img src="assets/app-home-release.png" width="1320" height="2868" alt="첫 출시 홈 화면. 다음 세션의 추천 구성과 편집, 재설계 기능" loading="lazy" /></div>
+            <figcaption class="screen-note">iPhone · 다음 세션</figcaption>
+          </figure>
+        </section>
+        <section class="journey-panel swim-panel" id="panel-swim" aria-labelledby="swim-title">
+          <div class="panel-copy" id="watch">
+            <p class="eyebrow">02 · 나의 수영에 집중하고</p>
+            <h3 id="swim-title">계획한 수영을,<br />손목에서 이어가세요.</h3>
+          </div>
+          <div class="watch-demo">
+            <section class="stroke-gallery" id="watch-active" aria-labelledby="active-title">
+              <div class="watch-explanation">
+                <h4 id="active-title">영법과 페이스를 한눈에.</h4>
+                <p>반복부터 휴식까지, 준비한 순서대로.</p>
               </div>
-              <section class="watch-state" id="watch-active" aria-labelledby="active-title" tabindex="0">
-                <div class="watch-explanation">
-                  <h4 id="active-title">영법과 페이스를 한눈에.</h4>
-                  <p>반복부터 휴식까지, 준비한 순서대로.</p>
-                </div>
+              <div class="stroke-screens">
                 <figure class="watch-figure">
-                  <div class="watch-case"><div class="watch-screen"><img src="assets/watch-release.png" width="416" height="496" alt="첫 출시 기본 화면. 자유형 6회 중 3회 완료, 직전 구간 2분 4초 /100m와 누적 750m." loading="lazy" /></div></div>
-                  <figcaption class="screen-note">실제 앱 화면 · 예시 기록</figcaption>
+                  <div class="watch-case"><div class="watch-screen"><img src="assets/watch-freestyle-release.png" width="416" height="496" alt="자유형 운동 화면. 6회 중 3회 완료, 직전 구간 2분 4초 /100m와 누적 750m. 예시 기록." loading="lazy" /></div></div>
+                  <figcaption class="stroke-caption"><i class="freestyle" aria-hidden="true"></i>자유형</figcaption>
                 </figure>
-              </section>
-              <section class="watch-state" id="watch-rest" aria-labelledby="rest-title" tabindex="0">
+                <figure class="watch-figure">
+                  <div class="watch-case"><div class="watch-screen"><img src="assets/watch-backstroke-release.png" width="416" height="496" alt="배영 운동 화면. 6회 중 3회 완료, 직전 구간 2분 4초 /100m와 누적 750m. 예시 기록." loading="lazy" /></div></div>
+                  <figcaption class="stroke-caption"><i class="backstroke" aria-hidden="true"></i>배영</figcaption>
+                </figure>
+                <figure class="watch-figure">
+                  <div class="watch-case"><div class="watch-screen"><img src="assets/watch-breaststroke-release.png" width="416" height="496" alt="평영 운동 화면. 6회 중 3회 완료, 직전 구간 2분 4초 /100m와 누적 750m. 예시 기록." loading="lazy" /></div></div>
+                  <figcaption class="stroke-caption"><i class="breaststroke" aria-hidden="true"></i>평영</figcaption>
+                </figure>
+                <figure class="watch-figure">
+                  <div class="watch-case"><div class="watch-screen"><img src="assets/watch-butterfly-release.png" width="416" height="496" alt="접영 운동 화면. 6회 중 3회 완료, 직전 구간 2분 4초 /100m와 누적 750m. 예시 기록." loading="lazy" /></div></div>
+                  <figcaption class="stroke-caption"><i class="butterfly" aria-hidden="true"></i>접영</figcaption>
+                </figure>
+              </div>
+              <p class="screen-note">Apple Watch · 실제 앱 화면 · 예시 기록</p>
+            </section>
+            <div class="watch-support-grid">
+              <section class="watch-state" id="watch-rest" aria-labelledby="rest-title">
                 <div class="watch-explanation"><h4 id="rest-title">다음 출발까지, 여유 있게.</h4><p>휴식이 끝나면 진동으로<br />다음 출발을 알려드려요.</p></div>
-                <figure class="watch-figure"><div class="watch-case"><div class="watch-screen"><img src="assets/watch-rest-release.png" width="416" height="496" alt="남은 휴식 20초와 다음 자유형 메인 세트" loading="lazy" /></div></div><figcaption class="screen-note">실제 앱 화면 · 예시 기록</figcaption></figure>
+                <figure class="watch-figure"><div class="watch-case"><div class="watch-screen"><img src="assets/watch-rest-release.png" width="416" height="496" alt="남은 휴식 20초와 다음 자유형 메인 세트" loading="lazy" /></div></div><figcaption class="screen-note">Apple Watch · 휴식</figcaption></figure>
               </section>
-              <section class="watch-state" id="watch-lane" aria-labelledby="lane-title" tabindex="0">
+              <section class="watch-state" id="watch-lane" aria-labelledby="lane-title">
                 <div class="watch-explanation"><h4 id="lane-title">수영장이 달라도, 내 계획대로.</h4><p>레인 길이에 맞춰 수영 거리를 조정하세요.</p></div>
-                <figure class="watch-figure"><div class="watch-case"><div class="watch-screen"><img src="assets/watch-lane-release.png" width="416" height="496" alt="33m 수영장에 맞춰 400m 구성을 396m로 조정하는 시작 전 화면" loading="lazy" /></div></div><figcaption class="screen-note">실제 앱 화면 · 예시 기록</figcaption></figure>
+                <figure class="watch-figure"><div class="watch-case"><div class="watch-screen"><img src="assets/watch-lane-release.png" width="416" height="496" alt="33m 수영장에 맞춰 400m 구성을 396m로 조정하는 시작 전 화면" loading="lazy" /></div></div><figcaption class="screen-note">Apple Watch · 시작 전</figcaption></figure>
               </section>
             </div>
-          </section>
-          <section class="journey-panel" id="panel-review" aria-labelledby="review-title" tabindex="0">
-            <div class="panel-copy"><p class="eyebrow">iPhone · 수영 후</p><h3 id="review-title">꾸준히 쌓은 수영,<br />눈에 보이는 변화로.</h3><p>오늘의 페이스와 영법별 효율을 돌아보고,<br />쌓인 기록에서 나의 변화를 확인하세요.</p><a class="text-link" href="#panel-plan">다음 수영 준비하기 <span aria-hidden="true">↻</span></a></div>
-            <figure class="panel-visual"><div class="phone"><img src="assets/app-growth-release.png" width="1320" height="2868" alt="첫 출시 성장 로그. 4주 거리 추세와 누적 거리, 수영 빈도." loading="lazy" /></div><figcaption class="screen-note">iPhone · 성장 로그</figcaption></figure>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="journey-panel" id="panel-review" aria-labelledby="review-title">
+          <div class="panel-copy"><p class="eyebrow">03 · 쌓여가는 변화를 보고</p><h3 id="review-title">꾸준히 쌓은 수영,<br />눈에 보이는 변화로.</h3><p>오늘의 페이스와 영법별 효율을 돌아보고,<br />쌓인 기록에서 나의 변화를 확인하세요.</p><a class="text-link" href="#panel-plan">다음 수영 준비하기 <span aria-hidden="true">↻</span></a></div>
+          <figure class="panel-visual"><div class="phone"><img src="assets/app-growth-release.png" width="1320" height="2868" alt="첫 출시 성장 로그. 4주 거리 추세와 누적 거리, 수영 빈도." loading="lazy" /></div><figcaption class="screen-note">iPhone · 성장 로그</figcaption></figure>
+        </section>
       </div>
       <p class="fineprint">앱 화면의 수영 기록은 예시입니다. 분석 항목은 Apple 건강에 포함된 데이터에 따라 달라집니다.</p>
     </section>
